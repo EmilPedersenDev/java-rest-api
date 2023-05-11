@@ -124,9 +124,6 @@ public class AuthorController {
                 throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Author not found");
             }
 
-//            for (Course course : author.get().getCourses()) {
-//                courseRepository.deleteById(course.getId());
-//            }
             repository.deleteById(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
